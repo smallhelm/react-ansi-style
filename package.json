@@ -1,10 +1,11 @@
 {
   "name": "react-ansi-style",
   "version": "0.0.0",
-  "description": "Convert a styled ansi string to react-dom spans with classes for the styles",
+  "description": "Convert a styled ansi string to react spans with classes for the styles",
   "main": "index.js",
   "scripts": {
-    "test": "node tests.js"
+    "test": "node tests.js",
+    "start": "wzrd example.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,17 @@
   "bugs": {
     "url": "https://github.com/smallhelm/react-ansi-style/issues"
   },
-  "homepage": "https://github.com/smallhelm/react-ansi-style#readme"
+  "homepage": "https://github.com/smallhelm/react-ansi-style#readme",
+  "dependencies": {
+    "ansi-style-parser": "^1.0.1",
+    "js-managed-css": "^1.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "react": "^15.0.1",
+    "react-dd": "^1.0.0",
+    "react-dom": "^15.0.1",
+    "tape": "^4.5.1",
+    "wzrd": "^1.3.1"
+  }
 }
