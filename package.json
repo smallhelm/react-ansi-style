@@ -1,0 +1,25 @@
+{
+  "name": "react-ansi-style",
+  "version": "0.0.0",
+  "description": "Convert a styled ansi string to react-dom spans with classes for the styles",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smallhelm/react-ansi-style.git"
+  },
+  "keywords": [
+    "react",
+    "ansi",
+    "colors",
+    "styles"
+  ],
+  "author": "farskipper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smallhelm/react-ansi-style/issues"
+  },
+  "homepage": "https://github.com/smallhelm/react-ansi-style#readme"
+}
