@@ -1,14 +1,14 @@
 var _ = require('lodash');
-var dd = require('react-dd');
 var jsCss = require('js-managed-css');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactAnsiStyle = require('./')(React);
+var reactAnsiStyle = require('./');
 
-//build up a test styled string
+//build up a styled string to test with
 var chalk = require('chalk');
 chalk.enabled = true;
-var ansi_string = _.map(_.without(_.keys(chalk.styles), 'reset', 'grey', 'hidden'), function(style){
+var test_styles = _.without(_.keys(chalk.styles), 'reset', 'grey', 'hidden');
+var ansi_string = _.map(test_styles, function(style){
   return chalk[style](style);
 }).join(' ');
 
@@ -23,12 +23,10 @@ jsCss({
 });
 require('./inject-css');//default css styles
 
-var div = document.createElement('DIV');
-ReactDOM.render(dd.createClass({
-  render: function(){
-    return dd.div({},
-      ReactAnsiStyle(ansi_string)
-    );
-  }
-})(), div);
-document.body.appendChild(div);
+ReactDOM.render(React.createElement('div', null,
+
+  //////////////////////////////////
+  //Here is where the magic happens
+  reactAnsiStyle(React, ansi_string)
+
+), document.body);
