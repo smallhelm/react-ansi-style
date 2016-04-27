@@ -40,7 +40,7 @@ ReactDOM.render(React.createElement('div', null,
 
 ), document.body);
 ```
-Output:
+
 ![react-ansi-style demo](https://raw.githubusercontent.com/smallhelm/react-ansi-style/master/example.png)
 
 ## API
